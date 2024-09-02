@@ -1,0 +1,43 @@
+
+8 Ball Technical Design Document
+---
+Name: Logan Saam 
+Date Created: 01/09/24
+---
+Program Description: 
+The program is analogous to the 8-ball toy generating a random response to a question based on a randomization of an answer subset.
+The program uses a the randint function of the random package to create a number and prints the corresponding line from the 8ball_responses.txt file
+---
+
+Logical Steps:  
+1. [Step 1: Ask user if they would like a response to a yes or no question]
+2. [Step 2: If yes generate a random number]
+3. [Step 3: filter random number into a file reading function to pull the corresponding	 text line from the 8ball response file]
+4. [Step 4: print response from text file]
+5. [Step 5: repeat process until user wishes to quit and enters ‘n’]
+
+---
+
+Variables:  
+1. [ line_number: variable pulled into readline() from random number generation function]
+2. [ count: static variable to create while loop and break with a response of no]
+3.[useranswer: local variable in main function to receive and answer of y/n]
+
+---
+
+Functions:
+1. Function Name: random()
+   Description: generates a number 1-12 to correlate to the answer choices and returns the number 
+   Returns: returns a random number (1-12)
+
+2. Function Name: readline() 
+   Description: The function takes an input from the random() function to pull one of the 12 responses from the 8ball text file and returns it.
+   Function considers index and file exception errors.  
+   Parameters: Random number 1-12 from random()
+   Returns: random 8 ball answer
+
+---
+
+Link to repository: https://github.com/Logan125125/COP-2373-ClassWork
+
+
