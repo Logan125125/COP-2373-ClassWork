@@ -1,0 +1,40 @@
+Spam Filter Technical Design Document
+
+---
+
+Name: Logan Saam  
+Date Created: 09/14/24
+
+---
+
+Program Description: 
+	Program works to analyze incoming emails and allow users a baseline knowledge if the received information is spam. Companies across the United States and the World face spam daily, program eats to mitigate this issue with an algorithm to provide frontside insight of possible fraudulent electronic communications.
+
+---
+
+Logical Steps:  
+1. Receive email from user as an input 
+
+2. Split email from a singular string into a list of strings for each word
+
+3. Check each word in the list against a filter dictionary of common spam words
+
+4 (a). If spam score is less than five tell user that the email isn't spam and print list of any spam words used (only prints if spam words were used)
+
+4 (b). If greater than five spam words were used print the list of spam words and tell user that the communication is spam
+
+---
+
+Variables:  
+1. Filter: list of (30) spam words to check email against to determine spam content
+2. Spam_score: counting variable to track use of spam words
+3. Spam_words: list of spam words used to print for user
+4. Email: string variable to hold users email
+
+Functions:
+1. Function Name: main()
+   Description: Takes email from user and breaks it into a list of strings to check for their usage in a filter list to determine if there is an unusual volume of spam words within the communication  
+
+---
+
+Link to repository: https://github.com/Logan125125/COP-2373-ClassWork
