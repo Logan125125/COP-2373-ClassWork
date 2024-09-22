@@ -1,0 +1,40 @@
+Monthly Expense Tracker Technical Document
+---
+Name: Logan Saam
+Date Created: 09/22/24
+---
+Program Description:
+Program tallies monthly expenses and returns the users greatest, least, and total monthly
+expenses.
+---
+Logical Steps:
+1. Ask user if they would like to enter a monthly expense
+2. If they would like to add an expense, take input for the
+Expense name and append to expense name list
+3. Take input for the expense cost, append to expense list
+and add value to the total expense tally
+4. Repeat until user enters n to stop input loop
+5. Take max and min value for expense amount
+6. Print max min and total with names of max and min from
+Indexing the expense amount the values and pulling
+The correlated name for the expense.
+---
+Variables:
+1. expenseAmount[]: list of the cost for each expense
+2. expenseName[]: list of expense names
+3. expenseTotal(): int input to tally the value while processing
+4. stop: Boolean variable set to false to let while function end
+5. name: local variable to receive name and append
+6. amount: local variable to receive and append
+7. expenseHigh: max(exepenseAmount)
+8. expenseLow: min(expenseAmount)
+9. expenseHighName: finds the name of the max expense
+10. expenseLowName: finds name of low expense
+---
+Functions:
+1. Function Name: main()
+Description: Function takes input to build expense list and
+Then tells user the greatest, and least expense as well as their
+Monthly total bill.
+---
+Link to repository: https://github.com/Logan125125/COP-2373-ClassWork
