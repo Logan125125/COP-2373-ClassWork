@@ -1,0 +1,69 @@
+#Chapter (3) Assignement (A):
+    #Program compiles users monthly expenses 
+    #Lists total montly expeniture, highest monthly expense, and   
+    #lowest monthly expense
+    
+def main(): 
+
+    #innitializes:
+        #expense[ammount, name, and total]
+    expenseAmount = [] 
+    expenseName = []
+    expenseTotal = 0
+    
+    # create boolean stop variable
+    stop = False
+    
+    # Take full user inputs, breaks loop when complete
+    while not stop:
+        
+        check = input('Would you like to add a monthly expense? (y/n): ')
+        
+        if check.lower() == 'y':
+            # Name of the expense 
+            #appends name for each cycle 
+            
+            name = input('What is the name of the expense? ')
+            expenseName.append(name)
+            
+            # Price of the expense 
+            # appends for each cycle and adds ammount to expense total
+            try:
+                amount = float(input('What is the price of the expense? '))
+                expenseAmount.append(amount)
+                expenseTotal += amount
+                
+            
+            # future proofing for value exeptions    
+            except ValueError:
+                print("Invalid amount entered. Please enter a numeric value.")
+                continue
+        
+        #breaks boolean while loop
+        elif check.lower() == 'n':
+            # Stop checking for expenses
+            stop = True
+        
+        else:
+            # Invalid input prompts new user input
+            print('Please enter yes (y) to continue or no (n) to quit.')
+            
+    # Checks to make sure user input >= (1) value
+    if expenseAmount:
+        #finds high low values for expenses
+        expenseHigh = max(expenseAmount)
+        expenseLow = min(expenseAmount)
+        
+        #indexes expenses to correlate names to expoense high/low
+        expenseHighName = expenseName[expenseAmount.index(expenseHigh)]
+        expenseLowName = expenseName[expenseAmount.index(expenseLow)]
+        
+        # prints all nessacary values     
+        print(f'Total monthly expenditure: ${expenseTotal:.2f}')
+        print(f'Highest monthly expense: ${expenseHigh:.2f} (Name: {expenseHighName})')
+        print(f'Lowest monthly expense: ${expenseLow:.2f} (Name: {expenseLowName})')
+    else:
+        print('No expenses were recorded.')
+
+if __name__ == "__main__":
+    main()
