@@ -1,0 +1,46 @@
+Name: Logan Saam  
+Date Created: 10/20/24
+
+---
+
+Program Description: 
+Program takes input for a zip code, a phone number, and a social security number and uses pattern validation to determine the validity of input
+---
+
+Logical Steps:  
+1.	Get user input for phone number, zip and social
+2.	Check if each input is valid for the input type
+3.	Print validity of phone number, zip code and social
+
+---
+
+Variables:  
+1.	PhoneValid: Boolean receptor variable for a valid phone number
+2.	ZipValid: Boolean receptor variable for a valid zip code
+3.	SocialValid: Boolean receptor variable for a valid social security number
+
+---
+
+Functions:
+1. Function Name: phoneCheck
+   Description: checks against a regular statement for the validity of the phone number entered  
+   Parameters: [phone]; phone number that is to be checked  
+   Returns: returns Boolean true or false statement for validity of the phone
+
+2. Function Name: zipCheck
+   Description: checks against a regular statement for the validity of the zip code entered  
+   Parameters: [zipcode]; zip code that is to be checked  
+   Returns: returns Boolean true or false statement for validity of the zip
+
+3. Function Name: socialCheck
+   Description: checks against a regular statement for the validity of the social security number entered  
+   Parameters: [social]; social security number that is to be checked  
+   Returns:returns Boolean true or false statement for validity of the social
+
+4.Function Name: main
+  Description: Takes input for user's phone number, social security number and zip code to check if the input format is correct for its type. Program then prints if each is valid or not
+  
+
+---
+
+Link to repository: https://github.com/Logan125125/COP-2373-ClassWork
