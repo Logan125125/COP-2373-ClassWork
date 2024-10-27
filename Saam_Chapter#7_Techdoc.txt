@@ -1,0 +1,29 @@
+Name: Logan Saam
+Date Created: 10/27/24
+
+Program Description: 
+Takes in user input of sentences and displays the individual sentences followed by the count of sentences
+
+Functions used in the Program:
+1. Function Name: main()
+     Description: Takes input for sentences to count and print.
+Variables: 
+1.	Stop = Boolean variable to initialize/break while loop
+2.	Count = count variable for number of sentences
+Logical Steps: 
+1.	Create a while loop to allow entering multiple sets of sentences 
+2.	Ask user if they would like to enter sentences 
+a.	If Yes:
+i.	Ask user to enter sentences
+ii.	Sort sentences into a list
+iii.	Print and count the sentences
+b.	If No:
+i.	Print count of sentences
+ii.	Break the loop
+c.	If anything else:
+i.	Ask user to enter their answer again
+
+Logical Steps:
+1.	Call main()  function
+
+Link to your repository: https://github.com/Logan125125/COP-2373-ClassWork
