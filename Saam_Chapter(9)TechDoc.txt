@@ -1,0 +1,57 @@
+Name: Logan Saam  
+Date Created: November 1, 2024
+
+Program Description: 
+	Program creates BankAcct Class allowing objects that host interest rate and bank account balance information. 
+  This is in addition to the methods available allowing deposits/withdraws, changing of the interest rate, calculating
+  interest for a certain numbe of days and adding the interest to the account balance, and displaying 
+  current interest rate or current account balance. The class is also equipped with a __str__ method displaying both current
+  balance and rate. The class proceeds a test function that try’s each class method. 
+	
+
+Class Docstring:
+	- Class adds bank utilities, allowing Bank Account objects holding:
+                -Intrest rate and balance
+                
+            Methods include:
+                - __str__:
+                    Prints the current Intrest rate and Balance
+                -withdraw:
+                    removes specified ammount from the object's balance
+                -deposit:
+                    adds the specified ammount to the objects balance
+                -rate_adjust:
+                    replaces current intrest rate with specifed value
+                -intrestCalc:
+                    calculates intrest for current baalance and specified 
+                    ammount of days
+                -printIntrest:
+                    prints current intrest rate to console
+                -printBalance:
+                    prints the current balance to the console
+
+Functions used in the Program (list in order as they are called):
+1. Function Name: main()
+     Description: 
+Test function to view use cases of BankAcct class
+     Parameters: 
+N/A
+     Variables: 
+1.	bankAccount: object title for BankAcct class
+     Logical Steps: 
+1.	Instantiate the class with the bank account object with 5% interest and 100 dollars
+2.	Withdraw 100 dollars
+3.	Print balance of object
+4.	Deposit 35000 dollars
+5.	Use str method for object
+6.	Utilize rate adjust method to change rate to 7%
+7.	Print interest
+8.	Preform interest calculation
+     Returns: N/A
+
+
+Logical Steps:
+1.	Main()
+
+Link to your repository: https://github.com/Logan125125/COP-2373-ClassWork
+
