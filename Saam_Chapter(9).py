@@ -1,82 +1,74 @@
-# Saam Chapter (9)
-#Program functions as a financial instistution managment module 
-#Module includes 
-    #Intrest rate adjustment method
-    #Withdraw/deposit methods 
-    #balance methods 
-    #Intrest calculation method with respect to time 
-
+# Saam Chapter (9):
+# Program functions as a financial institution management module 
+# Module includes 
+# Interest rate adjustment method
+# Withdraw/deposit methods 
+# Balance methods 
+# Interest calculation method with respect to time 
 
 class BankAcct:
     """
-        Class adds bank utilities, allowing Bank Account objects holding:
-                -Intrest rate and balance
-                
-            Methods include:
-                - __str__:
-                    Prints the current Intrest rate and Balance
-                -withdraw:
-                    removes specified ammount from the object's balance
-                -deposit:
-                    adds the specified ammount to the objects balance
-                -rate_adjust:
-                    replaces current intrest rate with specifed value
-                -intrestCalc:
-                    calculates intrest for current baalance and specified 
-                    ammount of days
-                -printIntrest:
-                    prints current intrest rate to console
-                -printBalance:
-                    prints the current balance to the console
-                    
-                    
+    Class adds bank utilities, allowing Bank Account objects holding:
+        - Interest rate and balance
+
+    Methods include:
+        - __str__:
+            Prints the current interest rate and balance
+        - withdraw:
+            Removes specified amount from the object's balance
+        - deposit:
+            Adds the specified amount to the object's balance
+        - rateAdjust:
+            Replaces current interest rate with specified value
+        - interestCalc:
+            Calculates interest for current balance and specified 
+            amount of days
+        - printInterest:
+            Prints current interest rate to console
+        - printBalance:
+            Prints the current balance to the console
     """
-    #innitialize class values
+    # Initialize class values
     def __init__(self, interest, balance):
         self.interest = interest
         self.balance = balance
         
-    #__str__ method for class to return current balance and intrest rate
+    # __str__ method for class to return current balance and interest rate
     def __str__(self):
-        return ("The balance is ${}, your interest rate is {}%.".format(self.balance, self.interest))
+        return "The balance is ${}, your interest rate is {}%.".format(self.balance, round(self.interest * 100, 2))
 
-
-    #withdraw classmethod 
-        #prevent exeptions for overdraft
+    # Withdraw method 
     def withdraw(self, cash):
         if cash > self.balance:
             print("Insufficient funds for withdrawal.")
         else:
             self.balance -= cash
             
-    #create deposit method
+    # Deposit method
     def deposit(self, cash):
         self.balance += cash
     
-    #Create rate adjustment classmethod
-        #replace rate with new rate    
+    # Rate adjustment method
     def rateAdjust(self, rate):
         self.interest = rate
         
-    #create intrest calculation classmethod
-        #utilize daily intrest x balance x days
+    # Interest calculation method
     def interestCalc(self, days):
         daily_interest = (self.interest / 365)
         interest = round((daily_interest * self.balance * days), 2)
-        print("The interest paid for {} days is ${}".format(days, interest))
+        interestClean = round(interest * 100, 2)
+        print("The interest paid for {} days is ${}".format(days, interestClean))
         print("----------------------------------")
         self.balance += interest 
         self.printBalance()
     
-#Settup print methods for both balance and intrest methods
-    
-    #prints balance
+    # Print balance method
     def printBalance(self):
         print("Current balance: ${}".format(self.balance))
     
-    #prints the intrest rate      
+    # Print interest method      
     def printInterest(self):
-        print("Current interest rate: {}%".format(self.interest))
+        print("Current interest rate: {}%".format(round(self.interest * 100, 2)))
 
         
 def main():
@@ -85,10 +77,8 @@ def main():
     bankAccount.printBalance()
     bankAccount.deposit(35000)
     print(str(bankAccount))
-    bankAccount.rateAdjust(.07)
+    bankAccount.rateAdjust(0.07)
     bankAccount.printInterest()
     bankAccount.interestCalc(13)
-    BankAcc
-    
+
 main()
-        
