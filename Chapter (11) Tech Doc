@@ -1,0 +1,43 @@
+Chapter (11) Technical Document:
+Name: Logan
+Date Created: November 17th
+
+Program Description: 
+Program emulates a game of single deck poker, though may be edited to simulate multi deck if desired. 
+Functions used in the Program (list in order as they are called):
+1. Function Name: main()
+     Description: Description emulates a single person playing 5 card stud poker, lets player draw a hand and then replace any of the 5 cards as they choose replacing the cards as needed.  
+     Parameters: None 
+     Variables: 
+-	Deck:
+o	Object of the Deck class to simulate a deck of cards
+-	Stop:
+o	Stop variable for play loop, holds True/False
+-	Stop2:
+o	Secondary stop variable for redraw loop, holds True/False
+-	Ask:
+o	Check if user would like to play Poker, holds Y/N
+-	Check:
+o	Ask user if they would like to redraw cards, holds Y/N
+     Logical Steps: Ask user if they would like to play poker
+-	If yes:
+o	Deal a hand of cards
+o	Ask if they would like to redraw any cards
+o	If User responds yes:
+	Ask for the card number (1-5) and replace it
+	Repeat until user says no
+o	Display users finished hand of cards
+-	If no:
+o	Say thanks for playing
+o	End loop
+-	Loop program until Use says no
+     Returns: Nothing
+
+
+
+Logical Steps:
+1.	Main()
+
+Link to your repository:  https://github.com/Logan125125/COP-2373-ClassWork
+
+
