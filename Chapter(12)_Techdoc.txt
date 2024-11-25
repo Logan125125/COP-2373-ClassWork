@@ -1,0 +1,59 @@
+Name: Logan Saam
+Date Created: 10/27/24
+
+Program Description: 
+Takes chapter 8 project which allows user to read and write grades, and added an analysis function that gets the mean, median, standard deviation, min, and max for each test, and the total course. Additionally passing percentage of course, and number of students who passed each test 
+
+Functions used in the Program:
+1. Function Name: readWrite  
+     Description: Allows user to choose from reading  writing or analyzing the grade file.
+     Parameters: N/A
+     Variables:
+ Answer: holds an answer from the user as to reading, writing, or quitting from the program
+     Logical Steps: Program gets input for the Answer variable and passes the user t the read grades function, write grades function, or lets user exit the program
+     Returns: N/A
+
+2. Function Name: writeGrades  
+     Description: takes input from user for students' information and concatenates the dictionary into a list, the list in turn is saved to the grades file.
+     Parameters: N/A
+     Variables: 
+GradesList: holds all dictionaries of student info
+Header: holds header info to print to grades.csv
+NumberStudents: holds the input of user for number of students 
+     Logical Steps: Program gets user input for number of students and takes data for that number of students which is passed to the grades.csv file  
+     Returns: N/A
+
+3. Function Name: readGrades
+     Description: Function reads grades from the grades.csv file and passes them to user
+     Parameters: N/A
+     Variables:
+Dash: break variable to separate printed instances of student grades
+     Logical Steps: Opens grades.csv file and prints each row separated by a dashed line
+     Returns: N/A
+
+4.Function Name: gradeAverages
+     Description: Function analyzes the grades within the grades.csv file 
+     Parameters: N/A
+     Variables:
+Dash: break variable to separate printed instances of student grades
+passGrade: the grade requiring to pass and exam
+gradeArray: holds all of the students grades for test one through three
+testOne: array of all test one scores
+testTwo: array of all test two scores
+testThree: array of all test three test scores
+     Logical Steps: pushes test grade file into array, gets rid of the names and header, and then creates three objects to hold grades one through three. Act upon all the grades and the individual tests to get mean median, standard deviation, min, and max for the course. After all data is compiled find passing percentage of the course with number of grades of students who passed divided by number of students times 100, and cross check number of students who got oner a sixty for each exam to state how many students passed each test 
+     Returns: N/A
+
+Logical Steps:
+1.	ReadWrite:
+a.	If R
+i.	readGrades
+b.	If W
+2.	writeGrades
+3.      If A
+A.      gradeAverages
+c.	If QUIT
+i.	Ends program
+4.	All loop back to readWrite: 
+
+Link to your repository: https://github.com/Logan125125/COP-2373-ClassWork
