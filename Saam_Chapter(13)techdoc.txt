@@ -1,0 +1,44 @@
+Chapter (13) Technical Document:
+Name: Logan
+Date Created: November 17th
+
+Program Description: 
+Program models the population growth of 10 different Florida cities from 2023 to 2043
+Functions used in the Program (list in order as they are called):
+1. Function Name: main()
+     Description: Asks user if they would like to visualize population growth, lets them choose a city, and models the population growth for that city at 2% over 20 years 
+     Parameters: None 
+     Variables: 
+-	Check:
+o	Boolean variable to break if user answers no
+-	City:
+o	Holds number to find city from list based on user response 
+-	cityToCheck:
+o	pulls user requested city from table
+-	startPopulation:
+o	pulls start population from requested city 
+-	popList:
+o	list of population by year for twenty years
+-	Years:
+o	List of years from 2023 to 2043
+-	OddYears:
+o	List of odd years to make year tick marks on the graph
+     Logical Steps: Ask user if they would like to see population growth 
+-	If yes:
+o	Ask for which city 1-10
+	Take the stating population and build a list of growth at 2 percent for he next 20 years
+	Enumerate a list for the twenty years of growth tying the population to the respective year
+	Make a plot coordinating years[x] and population[y]
+-	If no:
+o	End loop
+     Returns: Nothing
+
+
+
+Logical Steps:
+1.	Main()
+
+Link to your repository:  https://github.com/Logan125125/COP-2373-ClassWork
+
+
+
