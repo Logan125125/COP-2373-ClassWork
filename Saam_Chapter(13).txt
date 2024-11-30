@@ -1,0 +1,59 @@
+#Saam Chapter 13: create a program that visually displays 2% population growth for 10 florida cities 
+
+
+import matplotlib.pyplot as mp
+import numpy as np
+
+def main():
+    
+    #create a numpy array from population csv. file
+    population = np.loadtxt('population_LS.csv', dtype='str', delimiter=',')
+    
+    #create array of cities to choose from 
+    cityChoices = np.delete(population, [1,2], axis= 1)
+    
+    Check = False
+    
+    while not Check:
+        ask = input('Would you like to see population growth?: [y/n]')
+        if ask.upper() == 'Y':
+            #print list of cities 1-10 
+            i = 1
+            for row in cityChoices:
+                print(f' {i}.', *row)
+                i += 1
+            city = int(input('what city would you like to visualize?:[1-10]'))
+            cityToCheck = population[(city-1)]
+            startPopulation = int(cityToCheck[2])
+           # Create lists to hold the population growth and years
+            popList = []
+            Years = []
+            
+            # Calculate the population growth for 20 years
+            for i in range(21): 
+                current_population = startPopulation * ((1.02) ** i) 
+                popList.append(current_population)
+                
+                # Add the corresponding year (2023 to 2043)
+                year = 2023 + i
+                Years.append(year)
+
+            # Print years and corresponding populations (for debugging)
+            print("Years:", Years)
+            print("Population Growth:", popList)
+            
+            #make odd years list for ticks:
+            oddYears = [num for num in Years if num % 2 != 0]
+            
+            # Plot the population growth over time
+            mp.plot(Years, popList)
+            mp.xticks(oddYears)
+            mp.xlabel('Year')
+            mp.ylabel('Population')
+            mp.title(f'Population Growth (2% annually) for {cityToCheck[0]}')
+            mp.show()
+            
+            Check = True
+        if ask.upper() == 'N':
+            Check = True    
+main()
